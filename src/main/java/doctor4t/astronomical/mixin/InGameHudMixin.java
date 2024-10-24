@@ -51,7 +51,7 @@ public abstract class InGameHudMixin {
 		if (player == null || !(player.getMainHandStack().getItem() instanceof MarshmallowStickItem)) {
 			return;
 		}
-		if (player.astronomical$isHoldingAttack() && player.isCreative()) {
+		if (player.astronomical$isHoldingAttack()) {
 			var width = MarshmallowStickItem.CookState.values()[MarshmallowStickItem.CookState.values().length - 1].cookTime / 10 + 6;
 			var x = this.scaledWidth / 2 - width / 2;
 			var y = this.scaledHeight / 2 + 9;
